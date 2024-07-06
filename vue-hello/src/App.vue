@@ -1,18 +1,29 @@
 <template>
   <div> 
-      start...
-      <MyAttrsComp a1="a1-v" a2="a2-v" @useEvent="greet" @click="greet"/>
-      end...
+      <MySlotComp>
+        from app , and message : {{ msg }} 
+        <template #header>
+          header template ... 
+        </template>
+        <template v-slot:content>
+          content template ... 
+        </template>
+        <template #footer>
+          footer template ... 
+        </template>
+      </MySlotComp>
   </div>
 </template>
 
 <script setup lang="ts">
-import MyAttrsComp from "./components/MyAttrsComp.vue";
+import { ref } from "vue";
+import MySlotComp from "./components/MySlotComp.vue";
  
 function greet(){
   console.log('hello my attrs comp ... ')
 }
 
+const msg = ref('first - app')
 </script>
 
 <style scoped></style>

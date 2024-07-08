@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import HeaderPin from './components/HeaderPin.vue'
-import Template1 from './components/Template01.vue'
+import router from './route/route'
 
-const app = createApp(App)
-app.component('HeaderPin', HeaderPin)
-app.component('Template1', Template1)
+const app = createApp(App) 
+
+app.use(router)
+
 app.mount('#app')

@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { computed, reactive, ref, watch, watchEffect } from "vue";
 
-import PropsComp from "./components/PropsComp.vue"; 
+import PropsComp from "@/components/PropsComp.vue"; 
 
 
 const pcTitle = 'good'

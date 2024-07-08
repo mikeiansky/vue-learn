@@ -5,14 +5,19 @@ import Home from '@/pages/Home.vue'
 import About from '@/pages/About.vue'
 import Message from '@/pages/message/Index.vue'
 import MessageDetail from '@/pages/message/Detail.vue'
+import path from 'path'
 
 const routes = [
-  { path: '/', component: Index },
+  // { path: '/', component: Index },
   { path: '/home', component: Home },
-  { path: '/about', component: About },
-  { path: '/message', component: Message , children : [
-    { path: '/message/detail/:id', component: MessageDetail }
-  ]},
+  { path: '/about', name: '/about', component: About },
+  {
+    path: '/message', component: Message, children: [
+      // {name:'/message/detail', path: '/message/detail', component: MessageDetail },
+      { name: '/message/detail', path: '/message/detail/:id/:title', component: MessageDetail }
+    ]
+  },
+  { path: '/', redirect: '/home' }
 ]
 
 const router = createRouter({

@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import MyEventComp from "./components/MyEventComp.vue";
+import MyEventComp from "@/components/MyEventComp.vue";
 
 function eventHappen(p1: any, p2: any) {
   console.log("event happen", p1, p2);

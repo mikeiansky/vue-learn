@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Template01 from "./components/Template01.vue";
+import Template01 from "@/components/Template01.vue";
 
 const appName = "Vue";
 const rawHtml = '<span style="color: red">This should be red.</span>';

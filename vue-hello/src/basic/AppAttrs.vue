@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import MyAttrsComp from "./components/MyAttrsComp.vue";
+import MyAttrsComp from "@/components/MyAttrsComp.vue";
  
 function greet(){
   console.log('hello my attrs comp ... ')
